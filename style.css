@@ -1,0 +1,65 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+.navigation__checkbox{
+  display: none;
+}
+
+/* MAIN CENTER LINE */
+.navigation__icon{
+  margin: 30px 30px;
+  position: relative;
+}
+/* CREAT BLANK CONTENT BEFORE AND AFTER THE NAVIGATION ICON */
+.navigation__icon::before, .navigation__icon::after {
+  content: " ";
+  position: absolute;
+  left: 0px;
+  transition: all .4s; 
+}
+/* FIRST TOP LINE */
+.navigation__icon::before {
+top: -8px;
+height: 2.5px; }
+
+/* LAST BOTTOM LINE */
+.navigation__icon::after {
+top: 8px;
+height: 2.5px; }
+
+/* THREE LINES TOGATHER */
+.navigation__icon, .navigation__icon::before, .navigation__icon::after {
+  width: 30px;
+  height: 3px;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+  display: inline-block; }
+
+  /* HOVER EFFECT ON NAVIGATION BUTTON */
+.navigation__button:hover .navigation__icon::before{
+  top: -10px;
+}    
+.navigation__button:hover .navigation__icon::after{
+  top: 10px;
+}  
+
+/* EFFECT ON NAVIGATION BUTTON AFTER CHECKED */
+.navigation__checkbox:checked  +  .navigation__button .navigation__icon{
+  background: transparent;
+  box-shadow: none;
+}
+.navigation__checkbox:checked  +  .navigation__button .navigation__icon::before{
+  top: 0;
+  background-color: red;
+  transform: rotate(135deg);
+}
+.navigation__checkbox:checked  +  .navigation__button .navigation__icon::after{
+  top: 0;
+  background-color: red;
+  transform: rotate(-135deg);
+}
