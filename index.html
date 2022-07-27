@@ -4,21 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="style2.css">
+    <title>Nave Bar</title>
 </head>
 <body>
-    <center>
-
-        <h1>HOVER AND CHECKED EFFECT ON THE MENU BUTTON</h1>
-        <div class="navigation">
-            <input type="checkbox" class="navigation__checkbox" id="checkbox">
-            
-            <label for="checkbox" class="navigation__button">
-                <div class="navigation__icon"><span>&nbsp;</span></div>
-            </label>
+    <div class="nave-bar">
+        <!-- /* LOGO AND SLOGAN START */ -->
+        <div class="nave-logo">
+            <img src="img/Logo.png" alt="">
+            <div class="slogan">write company slogan here </div> 
         </div>
-        
-    </center>
+        <!-- /* LOGO AND SLOGAN ENDS */ -->
+
+        <div class="box2">
+            <!-- Navigation Links -->
+            <div class="nave-links">    
+                <ul>
+                    <li><a href="#">home</a></li>
+                    <li><a href="#">services</a></li>
+                    <li><a href="#">about</a></li>
+                    <li><a href="#">contact us</a></li>
+                </ul>
+            </div>
+            <!-- Navigation Links Ends-->
+
+            <!-- Searching bar -->
+            <div class="nave-search">   
+                <input type="text" id="search">
+                <label for="search" class="search-icon">
+                    <img src="img/search-icon.png" alt="">
+                </label>
+                <!-- Login Button -->
+                <div class="nave-login">
+                    <input type="button" value="Login">    
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="link-menu-button">
+        <a href="Menu button.html">GO TO MENU ICON</a>
+    </div>
+    
 </body>
 </html>
